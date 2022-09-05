@@ -1,0 +1,8 @@
+a = 1
+List = []
+while a * a < 2500:
+    if a * a % 10 == 1:
+        List.append(a * a)
+    a += 1
+
+print(List)
