@@ -1,0 +1,12 @@
+List = []
+inp = input()
+while inp != 'End':
+    List.append(int(inp))
+    inp = input()
+
+mid = sum(List)/len(List)
+deviation = 0
+for num in List:
+    deviation += (num - mid) ** 2
+deviation = (deviation / len(List)) ** 0.5
+print(max(List), min(List), mid, deviation)
