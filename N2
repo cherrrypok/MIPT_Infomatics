@@ -1,0 +1,42 @@
+from random import randint
+
+def cmp(a, b):
+    if a > b:
+        return 1
+    if a == b:
+        return 0
+    if a < b:
+        return -1
+
+def hoar_sort(A):
+    if len(A) > 1:
+        L = []
+        Mid = []
+        R = []
+        barrier = A[0]
+
+        for i in range(len(A)):
+            if cmp(A[i], barrier) < 0: # <
+                L += [A[i]]
+            elif cmp(A[i], barrier) == 0: # =
+                Mid += [A[i]]
+            else:
+                R += [A[i]]
+
+        hoar_sort(L)
+        hoar_sort(R)
+
+        a = 0
+        for i in range(len(L)):
+            A[a] = L[i]
+            a += 1
+        for i in range(len(Mid)):
+            A[a] = Mid[i]
+            a += 1
+        for i in range(len(R)):
+            A[a] = R[i]
+            a += 1
+
+A = [randint(0, 1000) for i in range(100)]
+hoar_sort(A)
+print(A)
