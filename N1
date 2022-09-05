@@ -1,7 +1,14 @@
 List = []
 inp = input()
+maxx = -1e8
+minn = 1e8
 while inp != 'End':
+    inp = int(inp)
     List.append(int(inp))
+    if inp > maxx:
+        maxx = inp
+    if inp < minn:
+        minn = inp
     inp = input()
 
 mid = sum(List)/len(List)
@@ -9,4 +16,4 @@ deviation = 0
 for num in List:
     deviation += (num - mid) ** 2
 deviation = (deviation / len(List)) ** 0.5
-print(max(List), min(List), mid, deviation)
+print(maxx, minn, mid, deviation)
