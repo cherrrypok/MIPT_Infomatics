@@ -1,0 +1,4 @@
+D = {1 : 'A', 2 : 'B', 3 : 'C'}
+
+a = {j:i for i,j in D.items()}
+print(a)
