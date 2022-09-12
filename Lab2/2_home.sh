@@ -1,4 +1,5 @@
-mkdir -p /home-local/student/hello\ home/home.txt
-echo "hello home!!" > /tmp/hello\ world/absolute.txt
-cat /tmp/hello\ world/absolute.txt
-ls -l /tmp/hello\ world/absolute.txt
+mkdir ~/hello\ home/
+touch ~/hello\ home/home.txt
+echo 'hello home!!' > ~/hello\ home/home.txt
+cat ~/hello\ home/home.txt
+ls -l ~/hello\ home/home.txt
